@@ -1,7 +1,7 @@
 import { Github, Linkedin } from 'lucide-react';
 const Footer = () => {
   return (
-    <div className='w-full h-20 px-3 bg-surface border-t flex items-center justify-between inset-shadow-xl'>
+    <div className='w-full h-24 px-3 bg-surface border-t flex items-center justify-between inset-shadow-xl'>
       <div className='w-1/12 text-2xl items-center'>
         <a
           href='/'

@@ -34,7 +34,25 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font-sans);
 }
+
+.shiki {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.shiki code {
+  background: transparent !important;
+  white-space: pre;
+}
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-title: var(--font-title);
+  --font-mono: var(--font-mono);
+}
+
 /* 
 :root {
 } */

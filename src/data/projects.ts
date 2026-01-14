@@ -1,7 +1,7 @@
-// import pawconnectImg from '@/assets/projects/pawconnect.png';
-// import hackatweetImg from '@/assets/projects/hackatweet.png';
-// import cinedbImg from '@/assets/projects/cinedb.png';
-import placeholderImg from '@/assets/projects/placeholder.jpg';
+import pawconnectImg from '@/assets/projects/pawconnect.png';
+import hackatweetImg from '@/assets/projects/hackatweet.png';
+import cinedbImg from '@/assets/projects/cinedb.png';
+// import placeholderImg from '@/assets/projects/placeholder.jpg';
 
 export type ProjectCardProps = {
   image: string;
@@ -13,7 +13,7 @@ export type ProjectCardProps = {
 
 export const projects: ProjectCardProps[] = [
   {
-    image: placeholderImg,
+    image: pawconnectImg,
     title: 'PawConnect',
     github: 'https://github.com/Yipno',
     description:
@@ -30,7 +30,7 @@ export const projects: ProjectCardProps[] = [
     ],
   },
   {
-    image: placeholderImg,
+    image: hackatweetImg,
     title: 'Hackatweet',
     github: 'https://github.com/Yipno',
     description:
@@ -47,7 +47,7 @@ export const projects: ProjectCardProps[] = [
     ],
   },
   {
-    image: placeholderImg,
+    image: cinedbImg,
     title: 'CineDB',
     github: 'https://github.com/Yipno',
     description:

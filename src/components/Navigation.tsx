@@ -1,9 +1,10 @@
 import ToggleTheme from './ToggleTheme';
 
 const navItems = [
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
+  { label: 'Accueil', href: '#' },
+  { label: 'Compétences', href: '#skills' },
+  { label: 'Projets', href: '#projects' },
+  { label: 'A propos', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
