@@ -35,6 +35,34 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
+  color: rgb(var(--text));
+}
+
+.pattern-col {
+  --pattern-fg: rgba(0, 0, 0, 0.05);
+
+  background-image: repeating-linear-gradient(
+    315deg,
+    var(--pattern-fg) 0,
+    var(--pattern-fg) 1px,
+    transparent 0,
+    transparent 50%
+  );
+
+  background-size: 10px 10px;
+  background-attachment: fixed;
+}
+
+.dark .pattern-col {
+  --pattern-fg: rgba(255, 255, 255, 0.1);
+}
+
+.pattern-col {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark .pattern-col {
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .shiki {
@@ -52,7 +80,6 @@ html {
   --font-title: var(--font-title);
   --font-mono: var(--font-mono);
 }
-
 /* 
 :root {
 } */

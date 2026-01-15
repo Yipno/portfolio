@@ -3,7 +3,7 @@ import { Github } from 'lucide-react';
 
 const ProjectCard = ({ image, title, github, description, stack }: ProjectCardProps) => {
   return (
-    <div className='border border-border w-110 h-120 rounded-2xl overflow-hidden shadow-md hover:shadow-lg hover:shadow-primary hover:scale-105 duration-300'>
+    <div className='bg-bg border border-border w-110 h-120 rounded-2xl overflow-hidden hover:shadow-[0_0_14px] hover:shadow-primary hover:scale-102 duration-300'>
       <img src={image} alt={title} className='w-full h-1/2 object-cover' />
       <div className='h-1/2 flex flex-col justify-start'>
         <div className='h-2/3 text-left px-3 pt-1'>

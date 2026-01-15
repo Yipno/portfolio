@@ -1,7 +1,7 @@
 import { Github, Linkedin } from 'lucide-react';
 const Footer = () => {
   return (
-    <div className='w-full h-24 px-3 bg-surface border-t flex items-center justify-between inset-shadow-xl'>
+    <div className='z-50 w-full h-24 px-3 bg-surface border-t border-border flex items-center justify-between'>
       <div className='w-1/12 text-2xl items-center'>
         <a
           href='/'
@@ -9,7 +9,7 @@ const Footer = () => {
           {'</dev>'}
         </a>
       </div>
-      <p className='text-text text-sm font-extralight font-sans'>
+      <p className='text-sm font-extralight font-sans text-text/60'>
         Fait main par <strong>Aubry Gamard</strong> © 2026 ⚡️{' '}
         <em>Là où on va, on n'a pas besoin de route.</em>
       </p>

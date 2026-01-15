@@ -9,16 +9,20 @@ import './App.css';
 
 function App() {
   return (
-    <div className='w-full bg-bg'>
-      <Navigation />
-      <main className='flex flex-col items-center'>
-        <Hero />
-        <Skills />
-        <Projects />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
+    <div className='grid grid-cols-[1fr_minmax(0,1200px)_1fr]'>
+      <div className='pattern-col border-r' />
+      <div className='w-full'>
+        <Navigation />
+        <main className='flex flex-col items-center'>
+          <Hero />
+          <Skills />
+          <Projects />
+          <About />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+      <div className='pattern-col border-l' />
     </div>
   );
 }

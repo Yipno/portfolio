@@ -1,23 +1,30 @@
 const Hero = () => {
   return (
-    <div className='pt-24 w-11/12  min-h-screen flex justify-center'>
-      <section className='flex'>
-        <div className='w-1/2 h-full flex flex-col justify-center text-left'>
-          <p className='font-mono text-primary'>// Hello World</p>
-          <h1 className='text-text py-2 font-title font-bold text-9xl leading-24'>
+    <div className='py-4 w-full min-h-screen flex justify-center pattern-col'>
+      <section className='flex border-t border-border'>
+        <div className='w-1/2 h-full flex flex-col justify-start text-left'>
+          <p className='bg-bg font-mono text-primary border-b border-r border-border'>
+            // Hello World
+          </p>
+          <h1 className='bg-bg border-b border-r border-border pt-3 pl-2 font-title font-bold text-9xl leading-23'>
             Aubry <br />
             <span className='text-primary'>Gamard</span>
           </h1>
-          <div className='pr-2'>
-            <p className='text-text font-title text-4xl'>Développeur web et mobile fullstack.</p>
-            <p className='mt-8 font-mono text-primary leading-4'>// About Me</p>
-            <p className='text-text font-sans text-3xl'>
+          <div>
+            <p className='bg-bg border-b border-r border-border pt-2 pl-2 text-text font-title text-4xl'>
+              Développeur web et mobile fullstack.
+            </p>
+            <div className='w-full h-8 border-b border-r border-border' />
+            <p className='bg-bg pt-0.5 pl-2 font-mono text-primary font-light text-xs leading-4 border-b border-r border-border'>
+              // About Me
+            </p>
+            <p className='bg-bg pb-1 pl-2 font-sans text-3xl border-b border-r border-border'>
               Après plus de 15 années dans des environnements techniques exigents, j'utilise
               aujourd'hui mon expérience pour créer des applications fiables et robustes.
             </p>
           </div>
         </div>
-        <div className='w-1/2 h-full border'></div>
+        <div className='w-1/2 h-full'></div>
       </section>
     </div>
   );

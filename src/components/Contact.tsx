@@ -1,5 +1,6 @@
 import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [name, setName] = useState<string>('');
@@ -8,8 +9,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //TODO Logique d'envoi du formulaire ici
-    console.log('Form submitted:', { name, email, message });
+    emailjs
+      .send('service_zwd12e4', 'template_d6a45om', {
+        name,
+        email,
+        message,
+      })
+      .then(response => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch(err => {
+        console.log('FAILED...', err);
+      });
 
     setName('');
     setEmail('');
@@ -19,38 +30,50 @@ const Contact = () => {
   return (
     <div
       id='contact'
-      className='pt-24 w-11/12 min-h-[calc(100vh-6rem)] flex flex-col items-center bg-bg'>
-      <div>
-        <p className='font-mono text-primary'>// Work together</p>
-        <h2 className='font-title text-text text-6xl pb-4'>Contact</h2>
-      </div>
-      <div className='flex w-2/3 mt-8 gap-8'>
-        <div className='w-1/2 flex px-1 flex-col justify-start gap-6'>
-          <div className='border border-border w-full h-30 rounded-2xl flex px-6 gap-6 items-center'>
-            <div className='rounded-xl bg-primary/50'>
-              <Mail className='m-4 h-8 w-8 text-text' />
-            </div>
-            <div className='flex flex-col justify-center text-left'>
-              <p className='text-text/60'>Email</p>
-              <p className='text-primary font-medium'>aubrysorianogamard@gmail.com</p>
-            </div>
-          </div>
-          <div className='border border-border w-full h-30 rounded-2xl px-6 gap-6 flex items-center'>
-            <div className='rounded-xl bg-primary/50'>
-              <MapPin className='m-4 h-8 w-8 text-text' />
-            </div>
-            <div className='flex flex-col justify-center text-left'>
-              <p className='text-text/60'>Location</p>
-              <p className='text-text font-medium'>Saint-Paul, La Réunion, France</p>
-            </div>
-          </div>
-          <div className='border border-border w-full flex-1 rounded-2xl flex'></div>
+      className='pt-24 w-full min-h-[calc(100vh-6rem)] flex flex-col items-center pattern-col'>
+      {/* Entete */}
+      <div className='flex justify-center border-y border-border w-full'>
+        <div className='text-left bg-bg border-x border-border'>
+          <p className='border-b border-border font-mono font-light text-xs text-primary px-2 pt-1'>
+            // Let's Work Together
+          </p>
+          <h2 className='font-title text-6xl px-2 -mb-1.5'>Contact</h2>
         </div>
+      </div>
+      {/* Contenu */}
+      <div className='flex w-4/5 max-w-4xl my-4 gap-8'>
+        {/* Gauche */}
+        <div className='w-1/2 flex px-1 flex-col justify-start gap-6'>
+          <div className='bg-bg border border-border w-full h-30 rounded-2xl flex px-6 gap-6 items-center'>
+            <div className='rounded-xl bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
+              <Mail className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
+            </div>
+            <div className='flex flex-col justify-center text-left'>
+              <p className='text-text/60 text-sm'>Email</p>
+              <a
+                href='mailto:aubrygamard.dev@gmail.com'
+                className='text-primary font-medium hover:underline'>
+                aubrygamard.dev@gmail.com
+              </a>
+            </div>
+          </div>
+          <div className='bg-bg border border-border w-full h-30 rounded-2xl px-6 gap-6 flex items-center'>
+            <div className='rounded-xl bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
+              <MapPin className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
+            </div>
+            <div className='flex flex-col justify-center text-left'>
+              <p className='text-text/60 text-sm'>Location</p>
+              <p className='font-medium'>Saint-Paul, La Réunion, France</p>
+            </div>
+          </div>
+          <div className='bg-bg border border-border w-full flex-1 rounded-2xl flex'></div>
+        </div>
+        {/* Droite */}
         <form
           id='contact-form'
           onSubmit={handleSubmit}
-          className='border border-border px-8 py-4 rounded-2xl w-1/2 flex flex-col items-start'>
-          <label htmlFor='name' className='text-left'>
+          className='bg-bg border border-border px-8 py-4 rounded-2xl w-1/2 flex flex-col items-start'>
+          <label htmlFor='name' className='text-left text-sm'>
             Votre Nom
           </label>
           <input
@@ -60,9 +83,9 @@ const Contact = () => {
             placeholder='John Doe'
             onChange={e => setName(e.target.value)}
             value={name}
-            className='border border-border w-full h-14 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
+            className='bg-white border border-border w-full h-12 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
           />
-          <label htmlFor='email' className='text-left'>
+          <label htmlFor='email' className='text-left text-sm'>
             Votre email
           </label>
           <input
@@ -72,9 +95,9 @@ const Contact = () => {
             placeholder='email@exemple.com'
             onChange={e => setEmail(e.target.value)}
             value={email}
-            className='border border-border w-full h-14 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
+            className='bg-white border border-border w-full h-12 rounded-lg px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
           />
-          <label htmlFor='message' className='text-left'>
+          <label htmlFor='message' className='text-left text-sm'>
             Votre message
           </label>
           <textarea
@@ -84,7 +107,7 @@ const Contact = () => {
             placeholder='Discutons de votre projet...'
             onChange={e => setMessage(e.target.value)}
             value={message}
-            className='border border-border w-full rounded-lg px-4 py-2 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
+            className='bg-white border border-border w-full rounded-lg px-4 py-2 mb-4 resize-none focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary'
           />
           <button
             id='submit-button'

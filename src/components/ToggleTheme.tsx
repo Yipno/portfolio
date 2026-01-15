@@ -26,7 +26,7 @@ const ToggleTheme = () => {
   return (
     <button
       onClick={toggleTheme}
-      className='p-2 rounded-lg glass-card hover:bg-primary/10 transition-colors'>
+      className='p-3.5 rounded-full glass-card hover:bg-text hover:text-white transition-colors hover:cursor-pointer mr-4 duration-300 ease-in-out'>
       {isDark ? (
         <Sun className='w-8 h-5 text-foreground' />
       ) : (
