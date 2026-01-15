@@ -7,6 +7,8 @@ export type ProjectCardProps = {
   image: string;
   title: string;
   github: string;
+  video?: string;
+  link?: string;
   description: string;
   stack?: string[];
 };
@@ -16,8 +18,10 @@ export const projects: ProjectCardProps[] = [
     image: pawconnectImg,
     title: 'PawConnect',
     github: 'https://github.com/Yipno',
+    video:
+      'https://res.cloudinary.com/dourrti76/video/upload/v1767071988/PAWCONNECT_SUB_nifpes.mov',
     description:
-      'Application mobile de signalement et de coordination pour la protection animale. Les utilisateurs peuvent créer des alertes géolocalisées avec photo, suivies en temps réel par des bénévoles et des structures partenaires via un back-office sécurisé.',
+      'Application mobile de signalement et de coordination pour la protection animale. Les utilisateurs peuvent créer des alertes géolocalisées avec photo, suivies en temps réel par des bénévoles et des structures partenaires via un backend sécurisé.',
     stack: [
       'React Native',
       'Expo',
@@ -50,8 +54,9 @@ export const projects: ProjectCardProps[] = [
     image: cinedbImg,
     title: 'CineDB',
     github: 'https://github.com/Yipno',
+    link: 'https://mymoviz-frontend-five-indol.vercel.app',
     description:
-      'Application web de découverte de films basée sur l’API TheMovieDB. Recherche, fiches films détaillées, notation et listes de favoris permettent d’explorer et d’organiser son catalogue personnel.',
-    stack: ['React', 'Redux Toolkit', 'TheMovieDB API', 'CSS'],
+      'Application web basée sur l’API TheMovieDB : recherche, fiches détaillées, système de favoris. Permet aux utilisateurs de découvrir et d’organiser leurs films et séries préférés.',
+    stack: ['React', 'Redux Toolkit', 'TheMovieDB API', 'CSS', 'Node.js', 'Express'],
   },
 ];

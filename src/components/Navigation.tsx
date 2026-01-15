@@ -15,7 +15,7 @@ const Navigation = () => {
         <a
           href='#'
           className='font-bold font-title text-3xl hover:text-primary duration-300 ease-in-out'>
-          {'<dev>'}
+          {'<AG>'}
         </a>
       </div>
       <div className='flex items-center'>

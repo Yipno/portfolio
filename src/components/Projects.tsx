@@ -20,6 +20,8 @@ const Projects = () => {
             key={p.title}
             image={p.image}
             github={p.github}
+            video={p.video}
+            link={p.link}
             title={p.title}
             description={p.description}
             stack={p.stack}

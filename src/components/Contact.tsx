@@ -1,30 +1,39 @@
 import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from '@/lib/emailjs';
 
 const Contact = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs
-      .send('service_zwd12e4', 'template_d6a45om', {
-        name,
-        email,
-        message,
-      })
-      .then(response => {
-        console.log('SUCCESS!', response.status, response.text);
-      })
-      .catch(err => {
-        console.log('FAILED...', err);
-      });
-
-    setName('');
-    setEmail('');
-    setMessage('');
+    if (isLoading) return; // Prevent multiple submissions
+    setIsLoading(true);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name,
+          email,
+          message,
+        }
+      );
+      alert('Message envoyé ! Merci 💌');
+      setName('');
+      setEmail('');
+      setMessage('');
+      setIsLoading(false);
+    } catch (error) {
+      alert("Erreur lors de l'envoi du message. Veuillez réessayer plus tard.");
+      setIsLoading(false);
+      console.error('Error sending email:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -80,6 +89,7 @@ const Contact = () => {
             id='name'
             name='name'
             type='text'
+            required
             placeholder='John Doe'
             onChange={e => setName(e.target.value)}
             value={name}
@@ -92,6 +102,7 @@ const Contact = () => {
             id='email'
             name='email'
             type='email'
+            required
             placeholder='email@exemple.com'
             onChange={e => setEmail(e.target.value)}
             value={email}
@@ -103,6 +114,7 @@ const Contact = () => {
           <textarea
             id='message'
             name='message'
+            required
             rows={5}
             placeholder='Discutons de votre projet...'
             onChange={e => setMessage(e.target.value)}
@@ -112,8 +124,14 @@ const Contact = () => {
           <button
             id='submit-button'
             type='submit'
-            className='w-full h-14 my-4 bg-primary text-bg font-medium px-6 py-3 rounded-full hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out'>
-            <Send className='inline mr-2' /> Send Message
+            disabled={isLoading}
+            className={[
+              'w-full h-14 my-4 bg-primary text-bg font-medium px-6 py-3 rounded-full',
+              isLoading
+                ? 'bg-muted/60 hover:cursor-not-allowed'
+                : 'hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out',
+            ].join(' ')}>
+            <Send className='inline mr-2' /> {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>

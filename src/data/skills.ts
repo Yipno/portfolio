@@ -2,8 +2,18 @@ export const skills = {
   developer: 'Aubry Gamard',
   focus: 'Full-Stack Development',
   stack: {
-    frontend: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Next.js', 'Redux Toolkit'],
-    backend: ['Node.js', 'Express', 'MongoDB', 'SQL', 'RESTful APIs'],
+    frontend: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'React',
+      'Next.js',
+      'Redux Toolkit',
+      'React Native',
+      'Expo',
+      'TailwindCSS',
+    ],
+    backend: ['Node.js', 'Express', 'MongoDB', 'SQL', 'API REST'],
   },
   passion: [
     'Building great products',
