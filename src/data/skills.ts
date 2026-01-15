@@ -14,6 +14,7 @@ export const skills = {
       'TailwindCSS',
     ],
     backend: ['Node.js', 'Express', 'MongoDB', 'SQL', 'API REST'],
+    tools: ['Git', 'GitHub', 'Figma'],
   },
   passion: [
     'Building great products',

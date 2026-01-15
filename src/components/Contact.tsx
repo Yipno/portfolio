@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, BriefcaseBusiness } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@/lib/emailjs';
 
@@ -50,11 +50,17 @@ const Contact = () => {
         </div>
       </div>
       {/* Contenu */}
-      <div className='flex w-4/5 max-w-4xl my-4 gap-8'>
+      <div className='w-full mt-4 border-y border-border flex flex-col items-center'>
+        <p className='bg-bg px-2 border-x border-border flex justify-center'>
+          Discutons de votre projet ! Que vous ayez une idée à concrétiser ou que vous <br />
+          souhaitiez en savoir plus sur mes compétences, envoyez-moi un message !
+        </p>
+      </div>
+      <div className='flex w-4/5 max-w-4xl my-4 gap-2'>
         {/* Gauche */}
-        <div className='w-1/2 flex px-1 flex-col justify-start gap-6'>
+        <div className='w-1/2 flex flex-col justify-start gap-2'>
           <div className='bg-bg border border-border w-full h-30 rounded-2xl flex px-6 gap-6 items-center'>
-            <div className='rounded-xl bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
+            <div className='rounded-lg bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
               <Mail className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
             </div>
             <div className='flex flex-col justify-center text-left'>
@@ -67,7 +73,7 @@ const Contact = () => {
             </div>
           </div>
           <div className='bg-bg border border-border w-full h-30 rounded-2xl px-6 gap-6 flex items-center'>
-            <div className='rounded-xl bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
+            <div className='rounded-lg bg-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
               <MapPin className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
             </div>
             <div className='flex flex-col justify-center text-left'>
@@ -75,13 +81,23 @@ const Contact = () => {
               <p className='font-medium'>Saint-Paul, La Réunion, France</p>
             </div>
           </div>
-          <div className='bg-bg border border-border w-full flex-1 rounded-2xl flex'></div>
+          <div className='bg-bg border border-border w-full flex-1 rounded-2xl px-6 py-6'>
+            <div className='mb-2 mr-6 rounded-lg bg-white float-left shadow-[inset_0_2px_6px_rgba(0,0,0,0.25),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
+              <BriefcaseBusiness className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
+            </div>
+            <p className='text-left'>
+              N'hésitez pas à me contacter pour discuter de vos projets, collaborations, missions
+              freelance ou opportunités professionnelles. Je suis mobile et toujours ouvert à de
+              nouvelles aventures et défis passionnants !
+            </p>
+            <p className='text-right mt-4 mr-4 italic text-sm text-primary'>A bientôt !</p>
+          </div>
         </div>
         {/* Droite */}
         <form
           id='contact-form'
           onSubmit={handleSubmit}
-          className='bg-bg border border-border px-8 py-4 rounded-2xl w-1/2 flex flex-col items-start'>
+          className='bg-bg border border-border px-6 py-4 rounded-2xl w-1/2 flex flex-col items-start'>
           <label htmlFor='name' className='text-left text-sm'>
             Votre Nom
           </label>
@@ -131,7 +147,8 @@ const Contact = () => {
                 ? 'bg-muted/60 hover:cursor-not-allowed'
                 : 'hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out',
             ].join(' ')}>
-            <Send className='inline mr-2' /> {isLoading ? 'Sending...' : 'Send Message'}
+            <Send className='inline mr-2' />{' '}
+            {isLoading ? 'Envoi en cours...' : 'Envoyez votre message'}
           </button>
         </form>
       </div>

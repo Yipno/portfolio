@@ -1,4 +1,4 @@
-import portraitImg from '@/assets/portrait.png';
+import portraitImg from '@/assets/portrait.jpeg';
 
 const Hero = () => {
   return (
@@ -19,11 +19,16 @@ const Hero = () => {
               <p className='bg-bg pt-0.5 pl-2 font-mono text-primary font-light text-xs leading-4 border-b border-border'>
                 // About Me
               </p>
-              <p className='bg-bg pb-1 pl-2 font-sans text-2xl border-b border-border'>
-                Après plus de 15 années dans des environnements techniques exigents, j'utilise
-                aujourd'hui mon expérience pour créer des applications fiables et robustes.
+              <p className='bg-bg pb-1 pl-2 font-sans text-lg border-b border-border leading-6'>
+                Je suis passionné par la création d’applications performantes et intuitives. J’aide
+                à transformer des idées en produits numériques réels. Spécialisé en{' '}
+                <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>,{' '}
+                <strong>MongoDB</strong>, <strong>TailwindCSS</strong>, et plus encore. Je suis
+                disponible pour des opportunités freelance ou CDI.
                 <br />
-                <em className='text-sm font-light'>*junior, en apprentissage continu</em>
+                <p className='mt-3 -mb-px'>
+                  <em className='text-sm font-light'>*junior, en apprentissage continu</em>
+                </p>
               </p>
             </div>
           </div>
@@ -39,7 +44,7 @@ const Hero = () => {
               <img
                 src={portraitImg}
                 alt='portrait'
-                className='w-full h-[calc(100%-6rem)] object-cover rounded-2xl p-2 bg-bg'
+                className='w-full h-112 object-contain p-2 bg-bg'
               />
               <div className='border-border border-t h-12 w-full' />
             </div>
@@ -56,19 +61,19 @@ const Hero = () => {
             <a
               href='#projects'
               aria-label='Aller aux projets'
-              className='w-full h-14 rounded-full bg-white font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+              className='w-full h-14 rounded-full bg-white font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
               Voir mes projets
             </a>
             <a
               href='#about'
               aria-label='Voir mon parcours'
-              className='w-full h-14 rounded-full bg-white font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+              className='w-full h-14 rounded-full bg-white font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
               Voir mon CV
             </a>
             <a
               href='#contact'
               aria-label='Envoyer un message'
-              className='w-full h-14 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:text-text hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+              className='w-full h-14 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:text-text hover:cursor-pointer hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
               Me contacter
             </a>
           </div>
