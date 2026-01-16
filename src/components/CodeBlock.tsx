@@ -13,19 +13,22 @@ function CodeBlock({ code, lang = 'json', fileName = 'skills.json ' }: CodeBlock
   useEffect(() => {
     codeToHtml(code, {
       lang: lang,
-      theme: 'synthwave-84',
+      themes: {
+        dark: 'synthwave-84',
+        light: 'rose-pine-dawn',
+      },
     }).then(html => setHtml(html));
   }, [code, lang]);
 
   return (
-    <div className='relative w-8/12 bg-[#0a2936] rounded-2xl overflow-hidden border-2 border-border'>
-      <div className='w-full py-2 px-3 flex justify-start bg-black'>
+    <div className='relative w-8/12 bg-[#fefcf5] dark:bg-[#0a2936] rounded-2xl overflow-hidden border-2 border-border'>
+      <div className='w-full py-2 px-3 flex border-b border-border justify-start bg-bg'>
         <div className='flex justify-evenly items-center gap-2'>
           <div className='rounded-full bg-red-400 w-3 h-3'></div>
           <div className='rounded-full bg-yellow-400 w-3 h-3'></div>
           <div className='rounded-full bg-green-400 w-3 h-3'></div>
         </div>
-        <p className='font-mono text-sm text-bg ml-12'>{fileName}</p>
+        <p className='font-mono text-sm text-text ml-12'>{fileName}</p>
       </div>
 
       <div className='w-full text-left'>

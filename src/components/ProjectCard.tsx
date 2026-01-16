@@ -11,12 +11,12 @@ const ProjectCard = ({
   stack,
 }: ProjectCardProps) => {
   return (
-    <div className='bg-bg border border-border w-110 h-120 rounded-2xl overflow-hidden hover:shadow-[0_0_14px] hover:shadow-primary hover:scale-102 duration-300'>
+    <div className='bg-bg border border-border w-110 h-120 rounded-2xl overflow-hidden hover:shadow-[0_0_30px] hover:shadow-primary hover:scale-102 duration-300'>
       <img src={image} alt={title} className='w-full h-1/2 object-cover' />
       <div className='h-1/2 flex flex-col justify-start'>
         <div className='h-2/3 text-left px-3 pt-1'>
           <div className='flex justify-between mr-2'>
-            <h3 className='text-3xl font-title'>{title}</h3>
+            <h3 className='text-3xl font-title text-text'>{title}</h3>
             <div className='flex gap-1 justify-end'>
               {video && (
                 <div className='relative group'>
@@ -25,7 +25,7 @@ const ProjectCard = ({
                     target='_blank'
                     rel='noopener noreferrer'
                     aria-label={`Vidéo de démonstration de ${title}`}
-                    className='hover:text-primary transition-colors'>
+                    className='hover:text-primary transition-colors text-text'>
                     <SquarePlay className='pt-1 h-8 w-8' />
                   </a>
 
@@ -50,7 +50,7 @@ const ProjectCard = ({
                     target='_blank'
                     rel='noopener noreferrer'
                     aria-label={`Lien vers le projet ${title}`}
-                    className='hover:text-primary transition-colors'>
+                    className='hover:text-primary transition-colors text-text'>
                     <ExternalLink className='pt-1 h-8 w-8' />
                   </a>
 
@@ -74,7 +74,7 @@ const ProjectCard = ({
                   target='_blank'
                   aria-label={`repertoire github de ${title}`}
                   rel='noopener noreferrer'
-                  className='hover:text-primary ease-in-out duration-300'>
+                  className='hover:text-primary ease-in-out duration-300 text-text'>
                   <Github className='pt-1 h-8 w-8' />
                 </a>
                 {/* Tooltip */}
@@ -98,7 +98,7 @@ const ProjectCard = ({
           <div className='flex flex-wrap gap-2 p-3 font-light'>
             {stack.map(s => (
               <p
-                className='font-mono text-xs border border-muted/60 bg-white px-1 pt-1 pb-0.5 rounded-md text-primary'
+                className='font-mono text-xs border border-muted/60 bg-bg px-1 pt-1 pb-0.5 rounded-md text-primary'
                 key={s}>
                 {s}
               </p>

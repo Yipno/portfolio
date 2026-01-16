@@ -1,20 +1,30 @@
 import ProjectCard from './ProjectCard';
 import { projects } from '../data/projects';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import type { SectionId } from '@/App';
 
-const Projects = () => {
+const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+  useEffect(() => {
+    if (inView) setActiveSection('projects');
+  }, [inView, setActiveSection]);
   return (
-    <div
+    <section
       id='projects'
+      ref={ref}
       className='pt-24 w-full min-h-screen flex flex-col justify-start items-center pattern-col'>
       <div className='flex justify-center border-y border-border w-full'>
-        <div className='text-left bg-bg border-x border-border '>
-          <p className='border-b border-border font-mono font-light text-xs text-primary pt-1 px-1'>
+        <div className='text-left bg-surface border-x border-border '>
+          <p className='border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.6)]'>
             // Portfolio
           </p>
-          <h2 className='font-title text-6xl px-1 -mb-1.5'>Projets</h2>
+          <h2 className='font-title text-6xl px-1 bg-surface pt-1.5 leading-11'>Projets</h2>
         </div>
       </div>
-      <section className='bg-bg border-y border-border mt-4 w-full flex justify-evenly gap-4 p-2'>
+      <div className='bg-surface border-y border-border mt-4 w-full flex justify-evenly gap-4 p-2'>
         {projects.map(p => (
           <ProjectCard
             key={p.title}
@@ -27,8 +37,8 @@ const Projects = () => {
             stack={p.stack}
           />
         ))}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

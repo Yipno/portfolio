@@ -24,10 +24,15 @@ export const experiences: ExperienceCardProps[] = [
     date: '2013',
     school: '// SNCF',
     description: 'Diplome de conducteur de train',
-    competences: ['Conduite de trains', 'Sécurité ferroviaire', "Gestion des situations d'urgence"],
+    competences: [
+      'Conduite de trains',
+      'Sécurité ferroviaire',
+      'Conducteur moniteur',
+      "Gestion des situations d'urgence",
+    ],
   },
   {
-    title: 'Operateur exterieur en raffinage',
+    title: 'Opérateur extérieur en raffinage',
     date: '2008',
     school: '// IFP School - ENSPM',
     description:
