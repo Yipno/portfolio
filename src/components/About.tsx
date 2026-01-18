@@ -17,18 +17,18 @@ const About = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void
     <section
       id='about'
       ref={ref}
-      className='pt-24 w-full min-h-screen flex flex-col justify-start items-center pattern-col'>
+      className='pt-24 w-full min-h-screen flex flex-col justify-start items-center'>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-2 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
             // Curriculum Vitae
           </p>
-          <h2 className='font-title text-6xl px-2 pt-1.5 leading-11 bg-surface'>Parcours</h2>
+          <h2 className='font-title text-6xl px-1 pt-1.5 leading-11 bg-surface'>Parcours</h2>
         </div>
       </div>
 
-      <div className='bg-surface mt-4 px-2 border-y border-border w-full flex gap-2'>
-        <div className='bg-bg w-1/2 h-full flex flex-col justify-between mt-2 p-4 text-left border border-border rounded-2xl'>
+      <div className='bg-surface mt-4 px-2 border-y border-border w-full flex flex-col md:flex-row gap-2'>
+        <div className='bg-bg w-full sm:10/12 md:w-1/2 h-full flex flex-col justify-between mt-2 p-4 text-left border border-border rounded-2xl'>
           <h3 className='mt-1 font-title text-2xl text-center'>
             De la conduite des trains au développement d'applications.
           </h3>
@@ -59,7 +59,7 @@ const About = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void
             Télécharger mon CV
           </a>
         </div>
-        <div className='w-1/2 h-full flex flex-col items-center gap-2 py-2 pl-2 border-l border-border'>
+        <div className='w-full sm:10/12 md:w-1/2 h-full flex flex-col items-center gap-2 py-2 pl-2 border-l border-border'>
           {experiences.map(exp => (
             <ExperienceCard
               key={exp.title}

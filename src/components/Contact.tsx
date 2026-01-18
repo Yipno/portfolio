@@ -29,7 +29,7 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
           name,
           email,
           message,
-        }
+        },
       );
       alert('Message envoyé ! Merci 💌');
       setName('');
@@ -49,26 +49,26 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
     <section
       id='contact'
       ref={ref}
-      className='pt-24 w-full min-h-[calc(100vh-6rem)] flex flex-col items-center pattern-col'>
+      className='pt-24 w-full min-h-[calc(100vh-6rem)] flex flex-col items-center'>
       {/* Entete */}
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-2 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
             // Let's Work Together
           </p>
-          <h2 className='bg-surface font-title text-6xl px-2 pt-1.5 leading-11'>Contact</h2>
+          <h2 className='bg-surface font-title text-6xl px-1 pt-1.5 leading-11'>Contact</h2>
         </div>
       </div>
       {/* Contenu */}
       <div className='w-full mt-4 border-y border-border flex flex-col items-center'>
-        <p className='bg-surface px-2 border-x border-border flex justify-center'>
-          Discutons de votre projet ! Que vous ayez une idée à concrétiser ou que vous <br />
-          souhaitiez en savoir plus sur mes compétences, envoyez-moi un message !
+        <p className='w-11/12 md:w-2/3 lg:w-1/2 bg-surface px-2 border-x border-border flex justify-center'>
+          Discutons de votre projet ! Que vous ayez une idée à concrétiser ou que vous souhaitiez en
+          savoir plus sur mes compétences, envoyez-moi un message !
         </p>
       </div>
-      <div className='flex w-4/5 max-w-4xl my-4 gap-2'>
+      <div className='flex flex-col items-center md:items-stretch md:flex-row md:w-11/12 lg:w-4/5 max-w-4xl my-4 gap-2'>
         {/* Gauche */}
-        <div className='w-1/2 flex flex-col justify-start gap-2'>
+        <div className='w-11/12 md:w-1/2 flex flex-col md:justify-start gap-2'>
           <div className='bg-bg border border-border w-full h-30 rounded-2xl flex px-6 gap-6 items-center'>
             <div className='rounded-lg bg-surface shadow-[inset_0_2px_6px_rgba(0,0,0,0.35),inset_0_-2px_4px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_0_14px_rgba(0,240,0,0.65),inset_0_-2px_4px_rgba(255,255,255,0.05)]'>
               <Mail className='m-4 h-8 w-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]' />
@@ -107,7 +107,7 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
         <form
           id='contact-form'
           onSubmit={handleSubmit}
-          className='bg-bg border border-border px-6 py-4 rounded-2xl w-1/2 flex flex-col items-start'>
+          className='w-11/12 md:w-1/2 flex flex-col justify-center md:justify-start bg-bg border border-border px-6 py-4 rounded-2xl items-start'>
           <label htmlFor='name' className='text-left text-sm'>
             Votre Nom
           </label>
@@ -156,9 +156,9 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
             disabled={isLoading}
             className={[
               'w-full h-14 my-4 bg-primary text-bg hover:text-text font-medium px-6 py-3 rounded-full',
-              isLoading
-                ? 'bg-muted/60 hover:cursor-not-allowed'
-                : 'hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out',
+              isLoading ?
+                'bg-muted/60 hover:cursor-not-allowed'
+              : 'hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out',
             ].join(' ')}>
             <Send className='inline mr-2' />{' '}
             {isLoading ? 'Envoi en cours...' : 'Envoyez votre message'}

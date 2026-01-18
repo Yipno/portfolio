@@ -1,7 +1,7 @@
 import { Github, Linkedin } from 'lucide-react';
 const Footer = () => {
   return (
-    <div className='z-50 w-full h-24 px-3 bg-bg border-t border-border flex items-center justify-between'>
+    <div className='z-50 w-full h-24 px-2 bg-bg border-t border-border flex items-center justify-between'>
       <div className='w-1/12 text-2xl items-center'>
         <a
           href='#'
@@ -9,11 +9,11 @@ const Footer = () => {
           {'</AG>'}
         </a>
       </div>
-      <p className='text-sm font-extralight font-sans text-text/60'>
+      <p className='w-1/2 text-sm font-extralight font-sans text-text/60'>
         Fait main par <strong>Aubry Gamard</strong> <em className='text-xs'>v1.2</em> © 2026 ⚡️{' '}
         <em>Là où on va, on n'a pas besoin de route.</em>
       </p>
-      <div className='w-1/12 flex justify-evenly items-center '>
+      <div className='w-1/12 flex justify-end items-center gap-4 pr-2'>
         <a
           href='https://github.com/Yipno'
           target='blank'

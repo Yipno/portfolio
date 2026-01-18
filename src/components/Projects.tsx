@@ -15,7 +15,7 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
     <section
       id='projects'
       ref={ref}
-      className='pt-24 w-full min-h-screen flex flex-col justify-start items-center pattern-col'>
+      className='pt-24 w-full min-h-screen flex flex-col justify-start items-center'>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border '>
           <p className='border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.6)]'>
@@ -24,7 +24,7 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
           <h2 className='font-title text-6xl px-1 bg-surface pt-1.5 leading-11'>Projets</h2>
         </div>
       </div>
-      <div className='bg-surface border-y border-border mt-4 w-full flex justify-evenly gap-4 p-2'>
+      <div className='bg-surface border-y border-border mt-4 w-full flex md:flex-wrap lg:flex-nowrap flex-col md:flex-row justify-center sm:justify-evenly gap-2 p-2'>
         {projects.map(p => (
           <ProjectCard
             key={p.title}
@@ -35,6 +35,7 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
             title={p.title}
             description={p.description}
             stack={p.stack}
+            // isOpen={isOpen}
           />
         ))}
       </div>

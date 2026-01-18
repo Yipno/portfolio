@@ -13,11 +13,11 @@ export type SectionId = 'hero' | 'skills' | 'projects' | 'about' | 'contact';
 function App() {
   const [activeSection, setActiveSection] = useState<SectionId>('hero');
   return (
-    <div className='grid grid-cols-[1fr_minmax(0,1200px)_1fr]'>
-      <div className='pattern-col ' />
-      <div className='w-full border-x border-border'>
+    <div className='grid grid-cols-[1fr_minmax(0,1200px)_1fr] pattern-col'>
+      <div />
+      <div className='w-full'>
         <Navigation activeSection={activeSection} />
-        <main className='flex flex-col items-center'>
+        <main className='border-x border-border flex flex-col items-center'>
           <Hero setActiveSection={setActiveSection} />
           <Skills setActiveSection={setActiveSection} />
           <Projects setActiveSection={setActiveSection} />
@@ -26,7 +26,7 @@ function App() {
         </main>
         <Footer />
       </div>
-      <div className='pattern-col' />
+      <div />
     </div>
   );
 }

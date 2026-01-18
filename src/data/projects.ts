@@ -11,6 +11,7 @@ export type ProjectCardProps = {
   link?: string;
   description: string;
   stack?: string[];
+  // isOpen: boolean;
 };
 
 export const projects: ProjectCardProps[] = [
@@ -32,6 +33,7 @@ export const projects: ProjectCardProps[] = [
       'Cloudinary',
       'JWT',
     ],
+    // isOpen: false,
   },
   {
     image: hackatweetImg,
@@ -49,6 +51,7 @@ export const projects: ProjectCardProps[] = [
       'TailwindCSS',
       'Redux Toolkit',
     ],
+    // isOpen: false,
   },
   {
     image: cinedbImg,
@@ -58,5 +61,6 @@ export const projects: ProjectCardProps[] = [
     description:
       'Application web basée sur l’API TheMovieDB : recherche, fiches détaillées, système de favoris. Permet aux utilisateurs d’organiser leurs films et séries préférés. Le projet consiste a se familiariser avec les appels API et la gestion d’état.',
     stack: ['React', 'Redux Toolkit', 'TheMovieDB API', 'CSS', 'Node.js', 'Express'],
+    // isOpen: false,
   },
 ];
