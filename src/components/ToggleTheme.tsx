@@ -27,7 +27,9 @@ const ToggleTheme = () => {
       onClick={toggleTheme}
       className='p-3 rounded-full hover:bg-text hover:text-bg transition-colors hover:cursor-pointer mr-4 duration-300 ease-in-out'
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}>
-      {isDark ? <Sun className='w-8 h-5' /> : <Moon className='w-8 h-5' />}
+      {isDark ?
+        <Sun className='w-8 h-7' />
+      : <Moon className='w-8 h-7' />}
     </button>
   );
 };

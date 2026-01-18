@@ -15,7 +15,7 @@ const ProjectCard = ({
   // const [isCollapsed, setIsCollapsed] = useState<Boolean>(isOpen);
   return (
     <div
-      className='bg-bg border border-border w-full sm:w-2/3 md:w-5/12 lg:w-1/3 h-42 sm:h-120 rounded-2xl 
+      className='bg-bg border border-border w-full sm:w-2/3 md:w-5/12 lg:w-1/3 h-50 sm:h-120 rounded-2xl 
     overflow-hidden hover:shadow-[0_0_30px] hover:shadow-primary hover:scale-102 duration-300
     flex sm:flex-col'>
       <img src={image} alt={title} className='w-1/3 sm:w-full h-full md:h-1/2 object-cover' />
@@ -101,10 +101,10 @@ const ProjectCard = ({
           <p className='text-text text-sm font-sans'>{description}</p>
         </div>
         {stack && (
-          <div className='flex flex-wrap gap-2 p-3 font-light'>
+          <div className='hidden md:flex flex-wrap gap-1 p-1 md:gap-2 md:p-3 font-light'>
             {stack.map(s => (
               <p
-                className='font-mono text-xs md:text-xs border border-muted/60 bg-bg px-1 pt-1 pb-0.5 rounded-md text-primary'
+                className='font-mono text-xs md:text-xs border border-muted/60 bg-bg px-0.5 rounded-md text-primary'
                 key={s}>
                 {s}
               </p>

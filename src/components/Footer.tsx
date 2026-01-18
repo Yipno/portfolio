@@ -10,8 +10,7 @@ const Footer = () => {
         </a>
       </div>
       <p className='w-1/2 text-sm font-extralight font-sans text-text/60'>
-        Fait main par <strong>Aubry Gamard</strong> <em className='text-xs'>v1.2</em> © 2026 ⚡️{' '}
-        <em>Là où on va, on n'a pas besoin de route.</em>
+        Fait main par <strong>Aubry Gamard</strong> <em className='text-xs'>v1.4</em> © 2026 ⚡️{' '}
       </p>
       <div className='w-1/12 flex justify-end items-center gap-4 pr-2'>
         <a
