@@ -1,6 +1,6 @@
 import pawconnectImg from '@/assets/projects/pawconnect.png';
-import hackatweetImg from '@/assets/projects/hackatweet.png';
-import cinedbImg from '@/assets/projects/cinedb.png';
+import hackatweetImg from '@/assets/projects/hackatweet_cp.png';
+import cinedbImg from '@/assets/projects/cinedb_cp.png';
 // import placeholderImg from '@/assets/projects/placeholder.jpg';
 
 export type ProjectCardProps = {

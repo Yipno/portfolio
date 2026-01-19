@@ -15,13 +15,13 @@ const ProjectCard = ({
   // const [isCollapsed, setIsCollapsed] = useState<Boolean>(isOpen);
   return (
     <div
-      className='bg-bg border border-border w-full sm:w-2/3 md:w-5/12 lg:w-1/3 h-50 sm:h-120 rounded-2xl 
+      className='bg-bg border border-border w-full sm:w-2/3 md:w-5/12 min-h-50 lg:w-1/3 sm:h-120 rounded-2xl 
     overflow-hidden hover:shadow-[0_0_30px] hover:shadow-primary hover:scale-102 duration-300
     flex sm:flex-col'>
-      <img src={image} alt={title} className='w-1/3 sm:w-full h-full md:h-1/2 object-cover' />
+      <img src={image} alt={title} className='w-1/3 sm:w-full flex-1 md:h-1/2 object-cover' />
       <div className='h-full sm:h-1/2 flex flex-col justify-start'>
         <div className='h-2/3 text-left px-3 pt-1'>
-          <div className='flex justify-between'>
+          <div className='flex justify-between pt-1'>
             <h3 className=' text-2xl sm:text-3xl font-title text-text'>{title}</h3>
             <div className='flex gap-2 justify-end'>
               {video && (
@@ -101,7 +101,7 @@ const ProjectCard = ({
           <p className='text-text text-sm font-sans'>{description}</p>
         </div>
         {stack && (
-          <div className='hidden md:flex flex-wrap gap-1 p-1 md:gap-2 md:p-3 font-light'>
+          <div className='flex flex-wrap gap-1 p-2 md:gap-2 md:p-3 font-light'>
             {stack.map(s => (
               <p
                 className='font-mono text-xs md:text-xs border border-muted/60 bg-bg px-0.5 rounded-md text-primary'

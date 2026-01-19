@@ -67,7 +67,9 @@ const Navigation = ({ activeSection }: { activeSection: SectionId }) => {
           : <Menu className='w-8 h-8' />}
         </button>
         {!isOpen && (
-          <p className='font-title text-2xl text-primary mr-8 pt-1 pl-2'>{activeLabel}</p>
+          <p className='font-title text-2xl text-primary mr-8 pt-1 pl-2' onClick={toggleNav}>
+            {activeLabel}
+          </p>
         )}
         {isOpen && (
           <div className='md:hidden absolute left-0 right-0 top-full border-x border-b border-border bg-surface/80 backdrop-blur-2xl'>
