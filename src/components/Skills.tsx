@@ -20,7 +20,7 @@ const Skills = ({ setActiveSection }: { setActiveSection: (id: SectionId) => voi
       className='pt-24 w-full min-h-screen flex flex-col items-center '>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='bg-surface border-x border-border'>
-          <p className='text-left border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-glow'>
+          <p className='text-left border-b border-border commentary-text dark:text-glow'>
             // Stuff I can do
           </p>
           <h2 className='text-center font-title text-6xl px-1 pt-3.5 leading-11 bg-surface'>

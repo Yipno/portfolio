@@ -1,4 +1,4 @@
-import portraitImg from '@/assets/portrait.jpeg';
+import portraitImg from '@/assets/portrait.webp';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import type { SectionId } from '@/App';
@@ -35,7 +35,7 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
             </div>
           </div>
           <div className='w-full h-6 border-b border-border' />
-          <p className='bg-surface pt-0.5 pl-2 font-mono text-primary font-light text-xs leading-4 border-b border-border dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+          <p className='bg-surface pt-0.5 pl-2 font-mono commentary-text leading-4 border-b border-border dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
             // About Me
           </p>
           <div className='bg-surface pb-1 pl-2 font-sans text-sm md:text-lg border-b border-border sm:leading-6'>
@@ -64,6 +64,7 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
               src={portraitImg}
               alt='portrait'
               className='w-full h-112 object-cover rounded-2xl p-2 bg-bg'
+              fetchPriority='high'
             />
             <div className='border-border border-t h-12 w-full' />
           </div>

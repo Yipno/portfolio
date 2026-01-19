@@ -20,7 +20,7 @@ const About = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void
       className='pt-24 w-full min-h-screen flex flex-col justify-start items-center'>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-glow'>
+          <p className='border-b border-border commentary-text dark:text-glow'>
             // Curriculum Vitae
           </p>
           <h2 className='font-title text-6xl px-1 pt-1.5 leading-11 bg-surface'>Parcours</h2>

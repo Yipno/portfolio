@@ -49,11 +49,11 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
     <section
       id='contact'
       ref={ref}
-      className='pt-24 w-full min-h-[calc(100vh-7rem)] flex flex-col items-center'>
+      className='pt-24 w-full min-h-[calc(100vh-6rem)] flex flex-col items-center'>
       {/* Entete */}
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-glow'>
+          <p className='border-b border-border commentary-text dark:text-glow'>
             // Let's Work Together
           </p>
           <h2 className='bg-surface font-title text-6xl px-1 pt-1.5 leading-11'>Contact</h2>
@@ -170,11 +170,12 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
             id='submit-button'
             type='submit'
             disabled={isLoading}
+            aria-label='Envoyer un message'
             className={[
-              'w-full h-14 my-4 bg-primary text-bg hover:text-text font-medium px-6 py-3 rounded-full',
+              'w-full h-14 my-4 bg-primary text-text font-title hover:text-bg text-2xl px-6 py-3 rounded-full dark:text-bg',
               isLoading ?
                 'bg-muted/60 hover:cursor-not-allowed'
-              : 'hover:cursor-pointer hover:shadow-md hover:shadow-primary hover:-translate-y-1 active:translate-y-1 hover:duration-250 ease-in-out',
+              : 'hover:cursor-pointer hover:bg-text hover:shadow-[0_0_14px] hover:shadow-text hover:scale-105 active:scale-95 hover:duration-250 ease-in-out',
             ].join(' ')}>
             <Send className='inline mr-2' />{' '}
             {isLoading ? 'Envoi en cours...' : 'Envoyez votre message'}

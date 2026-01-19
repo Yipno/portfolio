@@ -6,6 +6,7 @@
   /* Back to the Future — light */
   --bg: 248 250 252;
   --surface: 255 255 255;
+  --comment: 194 65 12;
   --primary: 255 122 0;
   --secondary: 0 194 255;
   --accent: 255 210 63;
@@ -24,6 +25,7 @@
   --bg: 11 14 20;
   --surface: 17 24 39;
   --primary: 55 210 85;
+  --comment: 55 210 85;
   /* --primary: 225 29 72; */
   --secondary: 34 211 238;
   --accent: 163 230 53;
@@ -42,10 +44,10 @@ html {
 
 .commentary-text {
   font-family: var(--font-mono);
-  font-size: smaller;
+  font-size: 12px;
   color: rgb(var(--primary));
-  font-weight: 300;
-  padding: 4px 4px 0 4px;
+  font-weight: 400;
+  padding: 2px 4px 0 4px;
 }
 
 @utility text-glow {
