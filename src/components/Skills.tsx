@@ -2,12 +2,9 @@ import CodeBlock from './CodeBlock';
 import { skills } from '../data/skills';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
+import type { SectionId } from '@/App';
 
-type SkillsProps = {
-  setActiveSection: (id: 'hero' | 'skills' | 'projects' | 'about' | 'contact') => void;
-};
-
-const Skills = ({ setActiveSection }: SkillsProps) => {
+const Skills = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void }) => {
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
@@ -23,7 +20,7 @@ const Skills = ({ setActiveSection }: SkillsProps) => {
       className='pt-24 w-full min-h-screen flex flex-col items-center '>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='bg-surface border-x border-border'>
-          <p className='text-left border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.3)]'>
+          <p className='text-left border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-glow'>
             // Stuff I can do
           </p>
           <h2 className='text-center font-title text-6xl px-1 pt-3.5 leading-11 bg-surface'>

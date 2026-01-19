@@ -34,6 +34,7 @@ const Navigation = ({ activeSection }: { activeSection: SectionId }) => {
           {'<AG>'}
         </a>
       </div>
+      {/* DESKTOP NAV */}
       <div className='hidden md:flex items-center w-10/12 justify-center md:justify-end'>
         <ul className='flex md:flex-row justify-end items-center gap-4 px-4'>
           {navItems.map(item => {
@@ -55,8 +56,12 @@ const Navigation = ({ activeSection }: { activeSection: SectionId }) => {
           })}
         </ul>
       </div>
+      {/* MOBILE NAV */}
       <div className='md:hidden flex justify-between w-2/5'>
-        <button onClick={toggleNav} aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}>
+        <button
+          onClick={toggleNav}
+          className='mr-2'
+          aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}>
           {isOpen ?
             <X className='w-8 h-8' />
           : <Menu className='w-8 h-8' />}

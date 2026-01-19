@@ -13,7 +13,7 @@ export type SectionId = 'hero' | 'skills' | 'projects' | 'about' | 'contact';
 function App() {
   const [activeSection, setActiveSection] = useState<SectionId>('hero');
   return (
-    <div className='grid grid-cols-[1fr_minmax(0,1200px)_1fr] pattern-col'>
+    <div className='grid grid-cols-[1fr_minmax(0,1200px)_1fr] pattern-col duration-200'>
       <div />
       <div className='w-full'>
         <Navigation activeSection={activeSection} />

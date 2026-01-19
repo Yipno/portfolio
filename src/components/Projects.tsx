@@ -18,9 +18,7 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
       className='pt-24 w-full min-h-screen flex flex-col justify-start items-center'>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border '>
-          <p className='border-b border-border font-mono font-light text-xs text-primary pt-1 px-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.6)]'>
-            // Portfolio
-          </p>
+          <p className='border-b border-border commentary-text dark:text-glow'>// Portfolio</p>
           <h2 className='font-title text-6xl px-1 bg-surface pt-1.5 leading-11'>Projets</h2>
         </div>
       </div>

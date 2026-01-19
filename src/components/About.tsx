@@ -20,7 +20,7 @@ const About = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void
       className='pt-24 w-full min-h-screen flex flex-col justify-start items-center'>
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-glow'>
             // Curriculum Vitae
           </p>
           <h2 className='font-title text-6xl px-1 pt-1.5 leading-11 bg-surface'>Parcours</h2>
@@ -55,11 +55,11 @@ const About = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void
             href='/cv_aubry_gamard.pdf'
             download
             aria-label='Télécharger mon CV'
-            className='w-full h-14 pt-1 mt-5 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:cursor-pointer hover:text-text hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+            className='w-full h-14 pt-1 mt-5 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:cursor-pointer hover:text-text hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary active:scale-95 duration-300'>
             Télécharger mon CV
           </a>
         </div>
-        <div className='w-full sm:10/12 md:w-1/2 h-full flex flex-col items-center gap-2 py-2 pl-2 border-l border-border'>
+        <div className='w-full sm:10/12 md:w-1/2 h-full flex flex-col items-center justify-stretch gap-2 py-2 md:pr-0 md-border-t-0 md:border-r-0 border-border'>
           {experiences.map(exp => (
             <ExperienceCard
               key={exp.title}

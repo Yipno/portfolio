@@ -1,4 +1,4 @@
-import { Mail, MapPin, Send, BriefcaseBusiness } from 'lucide-react';
+import { Mail, MapPin, Send, BriefcaseBusiness, Github, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import emailjs from '@/lib/emailjs';
 import { useInView } from 'react-intersection-observer';
@@ -49,11 +49,11 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
     <section
       id='contact'
       ref={ref}
-      className='pt-24 w-full min-h-[calc(100vh-6rem)] flex flex-col items-center'>
+      className='pt-24 w-full min-h-[calc(100vh-7rem)] flex flex-col items-center'>
       {/* Entete */}
       <div className='flex justify-center border-y border-border w-full'>
         <div className='text-left bg-surface border-x border-border'>
-          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+          <p className='border-b border-border font-mono font-light text-xs text-primary px-1 pt-1 dark:text-glow'>
             // Let's Work Together
           </p>
           <h2 className='bg-surface font-title text-6xl px-1 pt-1.5 leading-11'>Contact</h2>
@@ -100,7 +100,23 @@ const Contact = ({ setActiveSection }: { setActiveSection: (id: SectionId) => vo
               freelance ou opportunités professionnelles. Je suis mobile et toujours ouvert à de
               nouvelles aventures et défis passionnants !
             </p>
-            <p className='text-right mt-4 mr-4 italic text-sm text-primary'>A bientôt !</p>
+            <div className='flex items-end justify-between gap-2 mt-2'>
+              <a
+                href='https://www.linkedin.com/in/aubry-gamard-1460a728a/'
+                target='blank'
+                aria-label='lien vers le profil linkedin'
+                className='hover:cursor-pointer hover:text-primary hover:scale-120 ease-in-out duration-300 text-text flex justify-start items-end gap-1'>
+                <Linkedin className='h-7 w-7' /> Linkedin
+              </a>
+              <a
+                href='https://github.com/Yipno'
+                target='blank'
+                aria-label='lien vers le profil github'
+                className='hover:cursor-pointer hover:text-primary hover:scale-120 ease-in-out duration-300 flex items-end gap-1'>
+                <Github className='h-7 w-7' /> GitHub
+              </a>
+              <p className='text-right italic text-sm text-primary'>A bientôt !</p>
+            </div>
           </div>
         </div>
         {/* Droite */}

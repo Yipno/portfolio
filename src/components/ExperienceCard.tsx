@@ -9,7 +9,7 @@ const ExperienceCard = ({
   type,
 }: ExperienceCardProps) => {
   return (
-    <div className='bg-bg border border-border w-full h-52 rounded-2xl p-3 flex-col justify-between hover:border-primary/50 hover:shadow-[0_0_14px] hover:shadow-primary hover:scale-102 duration-300'>
+    <div className='bg-bg border border-border w-full min-h-52 rounded-2xl p-3 flex-col justify-between hover:border-primary/50 hover:shadow-[0_0_14px] hover:shadow-primary hover:scale-102 duration-300'>
       <div className='flex justify-between'>
         <h3 className='font-title text-left text-2xl text-text'>{title}</h3>
         <p className='font-title text-2xl text-text'>{date}</p>

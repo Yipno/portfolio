@@ -18,17 +18,15 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
         <div className='w-full md:w-1/2 flex flex-col justify-start text-left mt-2 sm:mt-5.5'>
           <div className='flex w-full border-border'>
             <div className='w-1/2 md:w-full border-b md:border-l-0 border-border'>
-              <p className='text-xs md:text-base bg-surface font-mono text-primary border-y border-border dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
+              <p className='text-xs md:text-base bg-surface font-mono text-primary border-y border-border dark:text-glow'>
                 // Hello World
               </p>
               <h1 className='bg-surface border-b border-border md:pt-3 pl-2 font-title font-bold text-6xl md:text-9xl md:leading-24'>
                 Aubry <br className='hidden' />
-                <span className='text-primary dark:text-shadow-[0_0_24px_rgba(55,210,85,0.2)]'>
-                  Gamard
-                </span>
+                <span className='text-primary dark:text-glow'>Gamard</span>
               </h1>
 
-              <p className='bg-surface pt-2 pl-2 font-title text-3xl'>
+              <p className='bg-surface border-b border-border md:border-b-0 pt-2 pl-2 font-title text-3xl'>
                 Développeur web et mobile fullstack*
               </p>
             </div>
@@ -45,8 +43,8 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
               Je suis passionné par la création d’applications performantes et intuitives. J’aide à
               transformer des idées en produits numériques réels. Spécialisé en{' '}
               <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>,{' '}
-              <strong>MongoDB</strong>, <strong>TailwindCSS</strong>, et plus encore. Je suis
-              disponible pour des opportunités freelance ou CDI.
+              <strong>MongoDB</strong>, <strong>TailwindCSS</strong>, et en pixels bien alignés. Je
+              suis disponible pour des opportunités freelance, CDD ou CDI.
             </p>
             <p className='mt-1.75'>
               <em className='text-sm font-light'>*junior, en apprentissage continu</em>
@@ -82,19 +80,19 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
           <a
             href='#projects'
             aria-label='Aller aux projets'
-            className='w-full h-14 pt-1 rounded-full bg-bg font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+            className='w-full h-14 pt-1 rounded-full bg-bg font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary active:scale-95 duration-300'>
             Voir mes projets
           </a>
           <a
             href='#about'
             aria-label='Voir mon parcours'
-            className='w-full h-14 pt-1 rounded-full bg-bg font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+            className='w-full h-14 pt-1 rounded-full bg-bg font-title tracking-wide text-2xl border-2 border-text flex justify-center items-center hover:cursor-pointer hover:border-primary hover:text-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary active:scale-95 duration-300'>
             Voir mon CV
           </a>
           <a
             href='#contact'
             aria-label='Envoyer un message'
-            className='w-full h-14 pt-1 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:text-text hover:cursor-pointer hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary duration-300'>
+            className='w-full h-14 pt-1 rounded-full bg-text text-bg font-title tracking-wide text-2xl flex justify-center items-center hover:text-text hover:cursor-pointer hover:bg-primary hover:scale-102 hover:shadow-[0_0_14px] hover:shadow-primary active:scale-95 duration-300'>
             Me contacter
           </a>
         </div>

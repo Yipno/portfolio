@@ -22,7 +22,7 @@ export const projects: ProjectCardProps[] = [
     video:
       'https://res.cloudinary.com/dourrti76/video/upload/v1767071988/PAWCONNECT_SUB_nifpes.mov',
     description:
-      'Application mobile de signalement et de coordination pour la protection animale. Les utilisateurs peuvent créer des alertes géolocalisées avec photo, suivies en temps réel par des bénévoles et des structures partenaires via un backend sécurisé.',
+      'Application mobile de signalement et de coordination pour la protection animale. Alertes géolocalisées avec photo, suivies en temps réel, backend sécurisé.',
     stack: [
       'React Native',
       'Expo',
@@ -40,7 +40,7 @@ export const projects: ProjectCardProps[] = [
     title: 'Hackatweet',
     github: 'https://github.com/Yipno',
     description:
-      'Clone de Twitter réalisé en hackathon. Les utilisateurs peuvent publier des tweets, liker, supprimer et suivre un fil en temps réel. Le projet met l’accent sur la rapidité d’exécution et la mise en place d’un feed interactif.',
+      'Clone de Twitter réalisé en hackathon. Publication des tweets, like, suppression et suivi du fil en temps réel. Le projet met l’accent sur la rapidité d’exécution et la mise en place d’un feed interactif.',
     stack: [
       'React',
       'Next.js',
@@ -59,7 +59,7 @@ export const projects: ProjectCardProps[] = [
     github: 'https://github.com/Yipno',
     link: 'https://mymoviz-frontend-five-indol.vercel.app',
     description:
-      'Application web basée sur l’API TheMovieDB : recherche, fiches détaillées, système de favoris. Permet aux utilisateurs d’organiser leurs films et séries préférés. Le projet consiste a se familiariser avec les appels API et la gestion d’état.',
+      "Application web basée sur l’API TheMovieDB : recherche, fiches détaillées, système de favoris. Le projet d'étude pour se familiariser avec les appels API et la gestion d’état.",
     stack: ['React', 'Redux Toolkit', 'TheMovieDB API', 'CSS', 'Node.js', 'Express'],
     // isOpen: false,
   },

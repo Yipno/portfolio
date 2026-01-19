@@ -40,6 +40,18 @@ html {
   background-color: rgb(var(--bg));
 }
 
+.commentary-text {
+  font-family: var(--font-mono);
+  font-size: smaller;
+  color: rgb(var(--primary));
+  font-weight: 300;
+  padding: 4px 4px 0 4px;
+}
+
+@utility text-glow {
+  text-shadow: 0 0 14px rgb(var(--primary) / 0.35);
+}
+
 .pattern-col {
   background-color: rgb(var(--bg));
   --pattern-fg: rgba(0, 0, 0, 0.05);
