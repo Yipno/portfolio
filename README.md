@@ -1,75 +1,109 @@
-# React + TypeScript + Vite
+# Portfolio Aubry Gamard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Site en ligne** : http://aubrygamard.dev
 
-Currently, two official plugins are available:
+Portfolio personnel développé pour présenter mes projets et proposer un **CV interactif accessible en ligne**.  
+Ce projet est en évolution continue et sert de base stable pour exposer mes travaux actuels et futurs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objectif du projet
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Ce portfolio a été conçu comme un **projet frontend à part entière**, et non comme une simple vitrine.
 
-Note: This will impact Vite dev & build performances.
+Les objectifs principaux :
+- présenter mes projets de manière lisible et structurée  
+- proposer une interface claire, intuitive et cohérente  
+- mettre en avant une approche orientée **lisibilité, alignement et rigueur visuelle**  
 
-## Expanding the ESLint configuration
+Le design est volontairement affirmé et sobre, avec une attention particulière portée à la clarté de l’interface.  
+J’accorde beaucoup d’importance aux **pixels bien alignés**, à la hiérarchie visuelle et à une navigation simple et efficace.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧱 Stack technique
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Frontend** : React (SPA)
+- **Build tool** : Vite
+- **Langage** : TypeScript
+- **Styling** : Tailwind CSS
+- **Runtime / tooling** : Bun
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Aucune librairie externe majeure n’a été ajoutée volontairement afin de garder un socle simple, lisible et maîtrisé.
+
+---
+
+## 🗂️ Architecture
+
+- Application **SPA**
+- Organisation par **components**
+- Approche responsive :
+  - mobile
+  - desktop
+- Styling basé sur une approche utility-first avec Tailwind CSS
+
+L’architecture vise la clarté, la maintenabilité et la facilité d’évolution.
+
+---
+
+## ✨ Fonctionnalités
+
+- Navigation par **scroll** et **ancres**
+- Sections dédiées (présentation, projets, etc.)
+- **Dark mode**
+- Responsive (mobile & desktop)
+- Prise en compte de l’accessibilité :
+  - contrastes
+  - attributs ARIA
+  - navigation claire
+
+---
+
+## 🚀 Installation & lancement en local
+
+> Ce projet n’a pas vocation à être utilisé comme template, mais il reste exécutable localement.
+
+### Prérequis
+- Node.js
+- Bun
+
+### Installation
+```bash
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Lancement en développement
+```bash
+bun run dev
 ```
+
+### Build
+```bash
+bun run build
+```
+
+### Preview
+```bash
+bun run preview
+```
+
+---
+
+## 🔄 Évolutions prévues
+
+Le portfolio évoluera en fonction :
+- des retours reçus (techniques et UX)
+- de l’évolution de mes projets
+- de mes apprentissages et expérimentations
+
+Il s’agit d’un support vivant, destiné à s’améliorer dans le temps.
+
+---
+
+## 👤 À propos de l’auteur
+
+**Aubry Gamard**  
+Développeur web fullstack en reconversion professionnelle.
+
+Ce portfolio reflète ma manière de travailler :  
+sobriété, structure, lisibilité et attention aux détails.
