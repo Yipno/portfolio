@@ -33,7 +33,6 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
             title={p.title}
             description={p.description}
             stack={p.stack}
-            // isOpen={isOpen}
           />
         ))}
       </div>

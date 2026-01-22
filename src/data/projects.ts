@@ -41,16 +41,7 @@ export const projects: ProjectCardProps[] = [
     github: 'https://github.com/Yipno',
     description:
       'Clone de Twitter réalisé en hackathon. Publication des tweets, like, suppression et suivi du fil en temps réel. Le projet met l’accent sur la rapidité d’exécution et la mise en place d’un feed interactif.',
-    stack: [
-      'React',
-      'Next.js',
-      'Node.js',
-      'Express',
-      'MongoDB',
-      'Socket.io',
-      'TailwindCSS',
-      'Redux Toolkit',
-    ],
+    stack: ['React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'Redux Toolkit'],
     // isOpen: false,
   },
   {
