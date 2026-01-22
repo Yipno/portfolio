@@ -25,16 +25,15 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
                 Aubry <br className='hidden' />
                 <span className='text-primary dark:text-glow'>Gamard</span>
               </h1>
-
-              <p className='bg-surface border-b border-border md:border-b-0 pt-2 pl-2 font-title text-3xl'>
-                Développeur web et mobile fullstack*
+              <p className='bg-surface border-b border-border md:border-b-0 pt-1 pl-2 font-title text-3xl'>
+                Développeur web et mobile fullstack
               </p>
             </div>
             <div className='w-1/2 md:hidden flex justify-center border-y border-l border-border'>
               <img src={portraitImg} alt='portrait' className='h-full object-cover p-2 bg-bg ' />
             </div>
           </div>
-          <div className='w-full h-6 border-b border-border' />
+          <div className='w-full h-6 md:h-14.75 border-b border-border' />
           <p className='bg-surface pt-0.5 pl-2 font-mono commentary-text leading-4 border-b border-border dark:text-shadow-[0_0_14px_rgba(55,210,85,0.5)]'>
             // About Me
           </p>
@@ -45,9 +44,6 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
               <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>,{' '}
               <strong>MongoDB</strong>, <strong>TailwindCSS</strong>, et en pixels bien alignés. Je
               suis disponible pour des opportunités freelance, CDD ou CDI.
-            </p>
-            <p className='mt-1.75'>
-              <em className='text-sm font-light'>*junior, en apprentissage continu</em>
             </p>
           </div>
         </div>
