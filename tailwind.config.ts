@@ -22,7 +22,7 @@ export default {
         bg: 'rgb(var(--bg) / <alpha-value>)',
         surface: 'rgb(var(--surface) / <alpha-value>)',
         primary: 'rgb(var(--primary) / <alpha-value>)',
-        comment: 'rgb(var(--comment) / <aplpha-value>)',
+        comment: 'rgb(var(--comment) / <alpha-value>)',
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         text: 'rgb(var(--text) / <alpha-value>)',

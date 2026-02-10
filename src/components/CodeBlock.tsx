@@ -1,5 +1,15 @@
 import { useEffect, useState } from 'react';
-import { codeToHtml } from 'shiki';
+import { createHighlighterCore } from 'shiki/core';
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
+import langJson from 'shiki/langs/json.mjs';
+import themeDark from 'shiki/themes/synthwave-84.mjs';
+import themeLight from 'shiki/themes/rose-pine-dawn.mjs';
+
+const highlighterPromise = createHighlighterCore({
+  langs: [langJson],
+  themes: [themeDark, themeLight],
+  engine: createJavaScriptRegexEngine(),
+});
 
 type CodeBlockProps = {
   code: string;
@@ -11,13 +21,14 @@ function CodeBlock({ code, lang = 'json', fileName = 'skills.json ' }: CodeBlock
   const [html, setHtml] = useState<string>('');
 
   useEffect(() => {
-    codeToHtml(code, {
-      lang: lang,
-      themes: {
-        dark: 'synthwave-84',
-        light: 'rose-pine-dawn',
-      },
-    }).then(html => setHtml(html));
+    highlighterPromise.then(highlighter => {
+      setHtml(
+        highlighter.codeToHtml(code, {
+          lang,
+          themes: { dark: 'synthwave-84', light: 'rose-pine-dawn' },
+        }),
+      );
+    });
   }, [code, lang]);
 
   return (

@@ -15,14 +15,14 @@ const Footer = () => {
       <div className='flex flex-col justify-end items-start gap-2'>
         <a
           href='https://www.linkedin.com/in/aubry-gamard-1460a728a/'
-          target='blank'
+          target='_blank'
           aria-label='lien vers le profil linkedin'
           className='hover:cursor-pointer hover:text-primary hover:scale-120 ease-in-out duration-300 text-text flex justify-start items-end gap-1'>
           <Linkedin className='hidden md:inline h-7 w-7' /> Linkedin
         </a>
         <a
           href='https://github.com/Yipno'
-          target='blank'
+          target='_blank'
           aria-label='lien vers le profil github'
           className='hover:cursor-pointer hover:text-primary hover:scale-120 ease-in-out duration-300 text-text w-full flex items-end gap-1'>
           <Github className='hidden md:inline h-7 w-7' /> GitHub

@@ -3,6 +3,8 @@ import { Github, SquarePlay, ExternalLink } from 'lucide-react';
 
 const ProjectCard = ({
   image,
+  imageWidth,
+  imageHeight,
   title,
   github,
   video,
@@ -15,7 +17,14 @@ const ProjectCard = ({
       className={`bg-bg border border-border w-full sm:w-2/3 md:w-5/12 min-h-50 lg:w-1/3 sm:h-120 rounded-2xl 
     overflow-hidden hover:shadow-[0_0_30px] hover:shadow-primary hover:scale-102 duration-300 
     flex sm:flex-col`}>
-      <img src={image} alt={title} className='w-1/3 sm:w-full flex-1 md:h-1/2 object-cover' />
+      <img
+        src={image}
+        alt={title}
+        loading='lazy'
+        width={imageWidth}
+        height={imageHeight}
+        className='w-1/3 sm:w-full flex-1 md:h-1/2 object-cover'
+      />
       <div className='h-full sm:h-1/2 flex flex-col justify-start'>
         <div className='h-2/3 text-left px-3 pt-1'>
           <div className='flex justify-between pt-1'>

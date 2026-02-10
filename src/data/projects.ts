@@ -5,18 +5,21 @@ import cinedbImg from '@/assets/projects/cinedb_cp.png';
 
 export type ProjectCardProps = {
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   title: string;
   github: string;
   video?: string;
   link?: string;
   description: string;
   stack?: string[];
-  // isOpen: boolean;
 };
 
 export const projects: ProjectCardProps[] = [
   {
     image: pawconnectImg,
+    imageWidth: 389,
+    imageHeight: 222,
     title: 'PawConnect',
     github: 'https://github.com/Yipno',
     video:
@@ -37,6 +40,8 @@ export const projects: ProjectCardProps[] = [
   },
   {
     image: hackatweetImg,
+    imageWidth: 404,
+    imageHeight: 244,
     title: 'Hackatweet',
     github: 'https://github.com/Yipno',
     description:
@@ -46,6 +51,8 @@ export const projects: ProjectCardProps[] = [
   },
   {
     image: cinedbImg,
+    imageWidth: 413,
+    imageHeight: 238,
     title: 'CineDB',
     github: 'https://github.com/Yipno',
     link: 'https://mymoviz-frontend-five-indol.vercel.app',

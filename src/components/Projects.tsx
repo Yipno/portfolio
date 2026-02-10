@@ -27,6 +27,8 @@ const Projects = ({ setActiveSection }: { setActiveSection: (id: SectionId) => v
           <ProjectCard
             key={p.title}
             image={p.image}
+            imageWidth={p.imageWidth}
+            imageHeight={p.imageHeight}
             github={p.github}
             video={p.video}
             link={p.link}

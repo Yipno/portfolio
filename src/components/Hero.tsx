@@ -30,7 +30,7 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
               </p>
             </div>
             <div className='w-1/2 md:hidden flex justify-center border-y border-l border-border'>
-              <img src={portraitImg} alt='portrait' className='h-full object-cover p-2 bg-bg ' />
+              <img src={portraitImg} alt='portrait' width={819} height={959} className='h-full object-cover p-2 bg-bg ' />
             </div>
           </div>
           <div className='w-full h-6 md:h-14.75 border-b border-border' />
@@ -59,6 +59,8 @@ const Hero = ({ setActiveSection }: { setActiveSection: (id: SectionId) => void 
             <img
               src={portraitImg}
               alt='portrait'
+              width={819}
+              height={959}
               className='w-full h-112 object-cover rounded-2xl p-2 bg-bg'
               fetchPriority='high'
             />
